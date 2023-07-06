@@ -1,0 +1,126 @@
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20%;
+  padding: 3rem 2rem;
+  width: 100%;
+  background-color: var(--ac-500);
+  scroll-behavior: smooth;
+}
+.about-section img {
+  width: 800px;
+  height: 599px;
+  object-fit: contain;
+}
+.about-section h1 {
+  font-size: var(--fs-heading);
+  line-height: 170%;
+  color: var(--white);
+}
+.about-section p {
+  font-size: var(--fs-body);
+  line-height: 170%;
+  margin-right: 20%;
+  color: var(--white);
+}
+.about-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.about-content button {
+  font-size: var(--fs-menu);
+  width: 13.5rem;
+  margin-top: 1.31rem;
+  margin-left: 20%;
+  padding: 0.625rem;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  background-color: var(--ac-400);
+  color: var(--white);
+  box-shadow: 3px 3px 15px 0px rgb(246, 191, 111);
+  cursor: pointer;
+}
+.about-content button:hover {
+  background-color: var(--ac-400-hover);
+  transition: ease-in-out 0.5s;
+}
+.about-content .border-bottom {
+  border-bottom: 0.375rem solid var(--ac-200);
+  padding-bottom: 1rem;
+}
+
+@media (max-width: 1880px) {
+  .about-section {
+    gap: 10%;
+    padding: 3rem 2rem;
+  }
+}
+
+@media (max-width: 1440px) {
+  .about-section {
+    flex-direction: column;
+  }
+}
+@media (max-width: 1024px) {
+  .about-section img {
+    width: 800px;
+    height: 600px;
+  }
+  .about-section p {
+    font-size: 1.5rem;
+  }
+  .about-section h1 {
+    font-size: 3rem;
+  }
+  .about-section button {
+    font-size: 1.5rem;
+    width: 10rem;
+  }
+}
+@media (max-width: 850px) {
+  .about-section img {
+    width: 700px;
+    height: 500px;
+  }
+  .about-section p {
+    font-size: 1.3rem;
+  }
+  .about-section h1 {
+    font-size: 2.8rem;
+  }
+}
+@media (max-width: 700px) {
+  .about-section img {
+    width: 500px;
+    height: 300px;
+  }
+  .about-section p {
+    font-size: 1.2rem;
+  }
+  .about-section h1 {
+    font-size: 2.3rem;
+  }
+  .about-section button {
+    font-size: 1.3rem;
+    width: 7.5rem;
+  }
+}
+@media (max-width: 500px) {
+  .about-section img {
+    width: 350px;
+    height: 150px;
+  }
+  .about-section p {
+    font-size: 1rem;
+  }
+  .about-section h1 {
+    font-size: 2rem;
+  }
+  .about-section button {
+    font-size: 1.1rem;
+    width: 6.5rem;
+  }
+}

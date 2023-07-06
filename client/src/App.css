@@ -1,0 +1,50 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+:root {
+  /*custom variables*/
+  --ac-200: hsl(252, 100%, 88%);
+  --ac-500: hsl(272, 59%, 54%);
+  --ac-400: hsl(35, 89%, 61%);
+  --ac-400-hover: hsl(35, 89%, 55%);
+  --ac-500-hover: hsl(272, 59%, 44%);
+  --white: hsl(0, 0%, 100%);
+  --menu-hover: hsl(0, 0%, 85%);
+  --bg-300: hsl(114, 100%, 90%);
+  --fs-heading: 3rem; /*90*/
+  --fs-menu: 1.6rem;
+  --fs-body: 1.1rem; /*170*/
+}
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-color: var(--bg-300);
+}
+.content {
+  margin: 0 10%;
+}
+section {
+  scroll-snap-align: top;
+}
+section .purple-mark {
+  color: var(--ac-500);
+}
+section .yellow-mark {
+  color: var(--ac-400);
+  margin-right: 50%;
+}

@@ -1,0 +1,129 @@
+.footer {
+  color: var(--white);
+  background-color: var(--ac-200);
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20%;
+  align-items: center;
+  position: relative;
+  padding: 2rem 0;
+  padding-left: 5rem;
+}
+.left-section {
+  display: flex;
+  flex-direction: column;
+}
+.left-section .logo {
+  display: flex;
+  align-items: center;
+}
+
+.left-section .logo img {
+  width: 108px;
+  height: 108px;
+}
+.left-section .logo .title {
+  font-size: var(--fs-menu);
+  line-height: 120%;
+  margin-right: 50%;
+}
+
+.left-section .footer-list {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  gap: 1.5rem;
+}
+.left-section .footer-list a {
+  color: var(--white);
+  font-size: var(--fs-body);
+  text-decoration: none;
+}
+.left-section .footer-list li:hover {
+  transform: translateX(12px);
+  transition: ease-in-out 0.1s;
+}
+.left-section .footer-list a:hover {
+  transition: ease-in-out 0.2s;
+  color: var(--menu-hover);
+}
+.middle-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.middle-section .social-list {
+  display: flex;
+  gap: 4.625rem;
+}
+.middle-section .social-list img:nth-child(1) {
+  width: 50px;
+  height: 50px;
+}
+.middle-section .social-list img {
+  cursor: pointer;
+  width: 55px;
+  height: 55px;
+}
+
+.middle-section .social-list img:hover {
+  transform: translateY(-15px);
+  transition: ease-in-out 0.5s;
+}
+.right-section h1 {
+  font-size: 2.5rem;
+}
+
+@media (max-width: 1160px) {
+  .left-section .logo img {
+    width: 90px;
+    height: 90px;
+  }
+  .left-section .footer-list a {
+    font-size: 0.9rem;
+  }
+  .middle-section .social-list {
+    gap: 3rem;
+  }
+  .middle-section .social-list img {
+    width: 40px;
+    height: 40px;
+  }
+  .middle-section .social-list img:nth-child(1) {
+    width: 35px;
+    height: 35px;
+  }
+}
+@media (max-width: 1000px) {
+  .footer {
+    flex-direction: column;
+    gap: 5rem;
+  }
+}
+@media (max-width: 450px) {
+  .footer {
+    padding-left: 0;
+    padding: 2rem 3rem;
+  }
+  .right-section h1 {
+    font-size: 2.3rem;
+  }
+}
+@media (max-width: 360px) {
+  .middle-section .social-list {
+    gap: 2.5rem;
+  }
+  .middle-section .social-list img {
+    width: 35px;
+    height: 35px;
+  }
+  .middle-section .social-list img:nth-child(1) {
+    width: 30px;
+    height: 30px;
+  }
+  .middle-section p {
+    font-size: 0.8rem;
+  }
+}

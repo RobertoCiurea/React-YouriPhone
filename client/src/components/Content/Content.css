@@ -1,0 +1,128 @@
+.reason-section {
+  background-color: var(--ac-400);
+  padding: 3rem 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--white);
+  width: 100%;
+}
+.reason-section .reason-title {
+  font-size: var(--fs-heading);
+  margin-right: 70%;
+  border-left: 0.5rem solid var(--white);
+  padding-left: 1rem;
+}
+.reason-section img {
+  width: 500px;
+  height: 500px;
+  object-fit: contain;
+}
+.reason-content p {
+  font-size: var(--fs-body);
+  line-height: 170%;
+  margin-right: 50%;
+}
+.reason-content {
+  display: inline-flex;
+  padding: 0;
+  flex-direction: column;
+}
+.reason-content button {
+  width: 30%;
+  margin: 1rem 5%;
+  font-size: var(--fs-menu);
+  outline: none;
+  border: none;
+  background-color: var(--ac-500);
+  color: var(--white);
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 3px 3px 20px 0px var(--ac-500-hover);
+  cursor: pointer;
+}
+.reason-content button:hover {
+  background-color: var(--ac-500-hover);
+  transition: ease-in-out 0.5s;
+}
+@media (max-width: 1440px) {
+  .reason-section {
+    flex-direction: column;
+  }
+}
+@media (max-width: 1024px) {
+  .reason-section img {
+    width: 450px;
+    height: 450px;
+  }
+  .reason-section .reason-title {
+    font-size: 2.7rem;
+    margin-right: 40%;
+  }
+  .reason-section p {
+    margin-right: 30%;
+  }
+  .reason-content button {
+    font-size: 1.4rem;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 850px) {
+  .reason-section img {
+    width: 400px;
+    height: 400px;
+  }
+  .reason-section .reason-title {
+    font-size: 2.4rem;
+    margin-right: 20%;
+  }
+  .reason-section p {
+    margin-right: 20%;
+    font-size: 1rem;
+  }
+  .reason-content button {
+    font-size: 1.2rem;
+    width: 50%;
+    padding: 6px;
+  }
+}
+
+@media (max-width: 750px) {
+  .reason-section img {
+    width: 350px;
+    height: 350px;
+  }
+  .reason-section .reason-title {
+    font-size: 2.2rem;
+    margin-right: 20%;
+  }
+  .reason-section p {
+    margin-right: 0;
+    font-size: 0.9rem;
+  }
+  .reason-content button {
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 6px;
+  }
+}
+@media (max-width: 600px) {
+  .reason-section {
+    padding: 3rem 2rem;
+  }
+  .reason-section img {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+  }
+  .reason-section .reason-title {
+    font-size: 2rem;
+    margin-right: 30%;
+  }
+  .reason-content button {
+    font-size: 1.1rem;
+    width: 40%;
+    padding: 6px;
+  }
+}

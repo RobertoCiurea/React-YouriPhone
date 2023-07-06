@@ -1,0 +1,148 @@
+.newsletter-section {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0;
+  position: relative;
+}
+.newsletter-section h1 {
+  font-size: var(--fs-menu);
+  line-height: 120%;
+}
+.newsletter-input {
+  display: flex;
+  background-color: var(--white);
+  width: 22.5rem;
+  height: 2.8125rem;
+  margin-top: 1.5rem;
+  justify-content: space-between;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  border-radius: 25px;
+  align-items: center;
+}
+.newsletter-input form {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+.newsletter-input input {
+  border: none;
+  outline: none;
+  width: 14rem;
+  height: 1.5rem;
+  font-size: var(--fs-body);
+}
+.newsletter-input button {
+  border: none;
+  outline: none;
+  background-color: var(--white);
+}
+.newsletter-input img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  cursor: pointer;
+  margin-left: 2rem;
+}
+.newsletter-input img:hover {
+  transition: ease-in-out 0.2s;
+  scale: 1.1;
+}
+/*Popup*/
+.newsletter-section .popup {
+  font-size: var(--fs-body);
+
+  text-align: center;
+  color: var(--white);
+  background-color: var(--ac-400);
+  padding: 0;
+  border-radius: 20px;
+  position: absolute;
+  right: 17%;
+  margin: 0;
+  transform: translate3d(0, 0, 0);
+  animation: popup-l-size 0.6s ease-in-out;
+}
+
+.newsletter-section .popup p {
+  margin-right: 0.1%;
+}
+
+@keyframes popup-l-size {
+  0% {
+    top: -2rem;
+    opacity: 0;
+  }
+
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes popup-m-size {
+  0% {
+    top: -2rem;
+    opacity: 0;
+  }
+
+  100% {
+    top: 5rem;
+    opacity: 1;
+  }
+}
+@media (max-width: 850px) {
+  .newsletter-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .newsletter-section h1 {
+    font-size: 1.3rem;
+  }
+  .newsletter-input {
+    width: 21rem;
+    height: 2.8rem;
+  }
+  .newsletter-input input {
+    width: 13rem;
+  }
+  .newsletter-input img {
+    width: 30px;
+    height: 30px;
+  }
+  /*popup*/
+  .newsletter-section .popup {
+    top: 5rem;
+    font-size: 0.8rem;
+    transform: translateX(8rem);
+  }
+}
+@media (max-width: 450px) {
+  .newsletter-section h1 {
+    font-size: 1.2rem;
+  }
+  .newsletter-input {
+    width: 15rem;
+    height: 2.2rem;
+  }
+  .newsletter-input input {
+    width: 9rem;
+  }
+  .newsletter-input img {
+    width: 25px;
+    height: 25px;
+  }
+  .newsletter-section .popup {
+    font-size: 0.7rem;
+    transform: translate(-5rem, 7.5rem);
+  }
+}
+/*popup*/
+@media (max-width: 1024px) {
+  .newsletter-section .popup {
+    top: 5rem;
+    right: 23%;
+    animation: popup-m-size 0.6s ease-in-out;
+  }
+}

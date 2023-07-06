@@ -1,0 +1,60 @@
+:root {
+  --iphone-purple: hsl(272, 8%, 41%);
+  --iphone-gold: hsl(24, 100%, 88%);
+  --iphone-silver: hsl(0, 0%, 90%);
+  --iphone-black: hsl(0, 0%, 18%);
+  --cut-offer: hsl(351, 68%, 35%);
+}
+
+.product-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20%;
+  padding: 3rem 2rem;
+}
+.product-section .color-options {
+  display: flex;
+  justify-content: space-between;
+}
+.product-section .color-options button {
+  border-radius: 50%;
+  border: 2px solid var(--white);
+  outline: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.product-section .color-options button:hover {
+  border: 3px solid var(--ac-500-hover);
+  transition: ease-in-out 0.3s;
+}
+.color-options button:nth-child(1) {
+  background-color: var(--iphone-purple);
+}
+.color-options button:nth-child(2) {
+  background-color: var(--iphone-gold);
+}
+.color-options button:nth-child(3) {
+  background-color: var(--iphone-silver);
+}
+.color-options button:nth-child(4) {
+  background-color: var(--iphone-black);
+}
+.product-section .product-content .cut-deal {
+  color: var(--cut-offer);
+}
+.product-section .product-content .buy-button {
+  background-color: var(--ac-500);
+  border: none;
+  outline: none;
+  padding: 1rem;
+  cursor: pointer;
+  color: var(--white);
+  border-radius: 50px;
+}
+
+.product-section .product-content .buy-button:hover {
+  background-color: var(--ac-500-hover);
+  transition: ease-in-out 0.3s;
+}

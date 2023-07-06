@@ -1,0 +1,118 @@
+.intro-section .title {
+  margin-right: 50%;
+  border-left: 0.5rem solid var(--ac-400);
+  padding-left: 1rem;
+}
+
+.intro-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 6.375rem -3rem;
+  width: 100%;
+}
+.intro-section h1 {
+  font-size: var(--fs-heading);
+  line-height: 90%;
+}
+
+.intro-section img {
+  width: 300px;
+  height: 623px;
+  object-fit: contain;
+}
+.intro-section p {
+  font-size: var(--fs-body);
+  line-height: 170%;
+  margin-right: 50%;
+}
+.intro-section .flex {
+  display: flex;
+  flex-direction: column;
+}
+.intro-section .equal-sign {
+  font-size: 2rem;
+  margin-left: 9%;
+  margin-bottom: 0;
+}
+.intro-section .flex h3 {
+  font-size: var(--fs-menu);
+  line-height: 120%;
+  font-weight: bold;
+}
+
+.intro-section .flex .sub-title {
+  margin-right: 95%;
+  margin-top: 0;
+  line-height: 120%;
+}
+@media (max-width: 1270px) {
+  .intro-section .title {
+    margin-right: 30%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .intro-section {
+    flex-direction: column;
+    align-items: center;
+    margin: 6.375rem -0;
+  }
+
+  .intro-section h1 {
+    font-size: 3rem;
+  }
+  .intro-section p {
+    font-size: 1.5rem;
+  }
+  .content {
+    margin-left: 30%;
+  }
+
+  .intro-section img {
+    width: 300px;
+    height: 623px;
+  }
+}
+@media (max-width: 750px) {
+  .intro-section img {
+    width: 250px;
+    height: 583px;
+  }
+  .intro-section p {
+    line-height: 130%;
+    font-size: 1.2rem;
+  }
+  .intro-section h1 {
+    line-height: 100%;
+    font-size: 2.5rem;
+  }
+  .intro-section .title {
+    margin-right: 25%;
+  }
+
+  .intro-section .flex .sub-title {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 500px) {
+  .intro-section img {
+    width: 180px;
+    height: 500px;
+  }
+  .intro-section p {
+    line-height: 120%;
+    font-size: 1.1rem;
+  }
+  .intro-section h1 {
+    line-height: 90%;
+    font-size: 2.3rem;
+  }
+  .intro-section .title {
+    margin-right: 20%;
+  }
+
+  .intro-section .flex .sub-title {
+    font-size: 1.9rem;
+  }
+}

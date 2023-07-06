@@ -1,0 +1,44 @@
+.dialog {
+  border: none;
+  border-radius: 20px;
+  padding: 1rem 3rem;
+  z-index: 1;
+}
+.dialog::backdrop {
+  background-color: hsl(272, 59%, 54%, 0.25);
+}
+.dialog .dialog-content {
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.dialog .close-dialog {
+  cursor: pointer;
+  outline: none;
+  border: 2px solid red;
+  border-radius: 10px;
+  background-color: var(--white);
+}
+
+.item-container {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  align-items: center;
+}
+
+.item-container .cover-image {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+.item-container .delete-item {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  background-color: var(--white);
+}
