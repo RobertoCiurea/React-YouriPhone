@@ -58,3 +58,20 @@
   background-color: var(--ac-500-hover);
   transition: ease-in-out 0.3s;
 }
+
+@media (max-width: 1600px) {
+  .product-section {
+    gap: 5%;
+    padding: 3rem 0;
+  }
+  .product-section img {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 500px) {
+  .product-section {
+    flex-direction: column;
+  }
+}

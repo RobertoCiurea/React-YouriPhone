@@ -4,6 +4,15 @@ import "./ShoppingCart.css";
 export const ShoppingCart = ({ dialogRef, items, setItems }) => {
   const [total, setTotal] = useState(0);
 
+  useEffect(() => {
+    let totalPrice = 0;
+    items?.map((item) => {
+      totalPrice += item.price;
+    });
+    setTotal(Math.floor(totalPrice));
+    console.log(total);
+  }, [items]);
+
   function closeDialog() {
     dialogRef.current.close();
   }
@@ -47,6 +56,7 @@ export const ShoppingCart = ({ dialogRef, items, setItems }) => {
         ) : (
           <h3>Nu exista produse in cos</h3>
         )}
+        <h2>Total: {total} Lei</h2>
       </div>
     </dialog>
   );
