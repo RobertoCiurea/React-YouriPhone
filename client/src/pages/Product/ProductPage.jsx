@@ -3,6 +3,7 @@ import { Navbar, Footer, Modal, ShoppingCart } from "../../components/index";
 import "./Product.css";
 export const ProductPage = ({ product }) => {
   const images = product.photos;
+  const classColors = product.colors;
   const [color, setColor] = useState(0);
   const [items, setItems] = useState([]);
 
@@ -14,7 +15,7 @@ export const ProductPage = ({ product }) => {
           id: crypto.randomUUID(),
           title: product.title,
           price: product.price,
-          image: product.coverPhoto,
+          image: images[color],
         },
       ];
     });
@@ -34,22 +35,16 @@ export const ProductPage = ({ product }) => {
           <div className="product-content">
             <h1>{product.title}</h1>
             <div className="color-options">
-              <button
-                className="purple-button"
-                onClick={() => setColor(1)}
-              ></button>
-              <button
-                className="gold-button"
-                onClick={() => setColor(2)}
-              ></button>
-              <button
-                className="silver-button"
-                onClick={() => setColor(3)}
-              ></button>
-              <button
-                className="black-button"
-                onClick={() => setColor(0)}
-              ></button>
+              {classColors.map((classColor, index) => {
+                {
+                  return (
+                    <button
+                      className={classColor}
+                      onClick={() => setColor(index)}
+                    ></button>
+                  );
+                }
+              })}
             </div>
             <h3 className="cut-deal">
               {" "}

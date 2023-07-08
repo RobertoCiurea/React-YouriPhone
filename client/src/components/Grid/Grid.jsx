@@ -44,7 +44,9 @@ export const Grid = ({ gridRef }) => {
           <img src={Iphone_14} alt="Iphone 14" />
           <div className="details">
             iPhone 14
-            <button>Detalii</button>
+            <button>
+              <Link to="/products/iphone_14">Detalii</Link>
+            </button>
           </div>
         </div>
         {/*13 */}
@@ -52,7 +54,9 @@ export const Grid = ({ gridRef }) => {
           <img src={Iphone_13_pro_max} alt="Iphone 13 Pro Max" />
           <div className="details">
             iPhone 13 Pro Max
-            <button>Detalii</button>
+            <button>
+              <Link to="/products/iphone_13_pro_max">Detalii</Link>
+            </button>
           </div>
         </div>
 
@@ -60,7 +64,9 @@ export const Grid = ({ gridRef }) => {
           <img src={Iphone_13_pro} alt="Iphone 13 Pro" className="big-image" />
           <div className="details">
             iPhone 13 Pro
-            <button>Details</button>
+            <button>
+              <Link to="/products/iphone_13_pro">Detalii</Link>
+            </button>
           </div>
         </div>
 
@@ -68,7 +74,9 @@ export const Grid = ({ gridRef }) => {
           <img src={Iphone_13} alt="Iphone" />
           <div className="details">
             iPhone 13
-            <button>Detalii</button>
+            <button>
+              <Link to="/products/iphone_13">Detalii</Link>
+            </button>
           </div>
         </div>
         {/*12 */}
