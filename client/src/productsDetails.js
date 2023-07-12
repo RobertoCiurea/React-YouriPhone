@@ -28,6 +28,14 @@ import {
   Iphone_13_pink,
   Iphone_13_green,
   Iphone_13_red,
+
+  //12
+  Iphone_12,
+  Iphone_12_silver,
+  Iphone_12_blue,
+  Iphone_12_purple,
+  Iphone_12_green,
+  Iphone_12_red,
 } from "./components/Grid/index";
 
 const iphone_14_pro_max = {
@@ -97,7 +105,7 @@ const iphone_13_pro = {
 const iphone_13 = {
   title: "iPhone 13",
   price: 3999.99,
-  cutPrice: 4299.99,
+  cutPrice: 4399.99,
   photos: [
     Iphone_13,
     Iphone_13_blue,
@@ -109,6 +117,21 @@ const iphone_13 = {
   colors: ["black", "blue", "silver", "pink", "green", "red"],
 };
 
+const iphone_12 = {
+  title: "iPhone 12",
+  price: 3899.99,
+  cutPrice: 4199.99,
+  photos: [
+    Iphone_12,
+    Iphone_12_silver,
+    Iphone_12_blue,
+    Iphone_12_purple,
+    Iphone_12_green,
+    Iphone_12_red,
+  ],
+  colors: ["black", "silver", "blue", "purple", "green", "red"],
+};
+
 export {
   iphone_14_pro_max,
   iphone_14_pro,
@@ -116,4 +139,5 @@ export {
   iphone_13_pro_max,
   iphone_13_pro,
   iphone_13,
+  iphone_12,
 };

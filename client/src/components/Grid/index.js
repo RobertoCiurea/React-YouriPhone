@@ -5,6 +5,11 @@ import Iphone_11_pro_max from "../../assets/11/Iphone_11_pro_max.png";
 
 //12
 import Iphone_12 from "../../assets/12/iphone_12.png";
+import Iphone_12_silver from "../../assets/12/iphone_12_silver.png";
+import Iphone_12_blue from "../../assets/12/iphone_12_blue.png";
+import Iphone_12_purple from "../../assets/12/iphone_12_purple.png";
+import Iphone_12_green from "../../assets/12/iphone_12_green.png";
+import Iphone_12_red from "../../assets/12/iphone_12_red.png";
 import Iphone_12_pro from "../../assets/12/iphone_12_pro.png";
 import Iphone_12_pro_max from "../../assets/12/iphone_12_pro_max.png";
 
@@ -44,6 +49,11 @@ export {
   Iphone_11_pro,
   Iphone_11_pro_max,
   Iphone_12,
+  Iphone_12_silver,
+  Iphone_12_blue,
+  Iphone_12_purple,
+  Iphone_12_green,
+  Iphone_12_red,
   Iphone_12_pro,
   Iphone_12_pro_max,
   Iphone_13,

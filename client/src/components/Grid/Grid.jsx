@@ -99,7 +99,9 @@ export const Grid = ({ gridRef }) => {
           <img src={Iphone_12} alt="Iphone 12" />
           <div className="details">
             iPhone 12
-            <button>Detalii</button>
+            <button>
+              <Link to="/products/iphone_12">Detalii</Link>
+            </button>
           </div>
         </div>
 

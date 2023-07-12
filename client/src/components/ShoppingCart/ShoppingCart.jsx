@@ -10,14 +10,11 @@ export const ShoppingCart = ({ dialogRef, items, setItems }) => {
       totalPrice += item.price;
     });
     setTotal(Math.floor(totalPrice));
-    console.log(total);
   }, [items]);
 
   function closeDialog() {
     dialogRef.current.close();
   }
-  console.log("Dialog items");
-  console.log(items);
 
   function deleteItem(id) {
     setItems((currentItems) => {

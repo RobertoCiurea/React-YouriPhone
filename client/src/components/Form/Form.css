@@ -1,0 +1,49 @@
+.form-content {
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+form h1 {
+  font-size: var(--fs-heading);
+  color: var(--ac-500-hover);
+}
+form input {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid var(--ac-500-hover);
+  font-size: var(--fs-body);
+}
+form .login {
+  outline: none;
+  border: none;
+  font-size: 1.4rem;
+  background-color: var(--ac-500);
+  cursor: pointer;
+  color: var(--white);
+  padding: 1rem;
+  border-radius: 20px;
+}
+form .login:hover {
+  background-color: var(--ac-500-hover);
+  transition: ease-in-out 0.5s;
+}
+form p {
+  margin: 0;
+}
+form a {
+  color: var(--ac-500);
+}
+form a:hover {
+  color: var(--ac-500-hover);
+  transition: ease-in-out 0.5s;
+}

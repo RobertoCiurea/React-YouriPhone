@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import Logo from "../../assets/icons/logo.svg";
-export const Navbar = ({ targetRef, modalRef, dialogRef }) => {
+export const Navbar = ({ targetRef, dialogRef }) => {
   const [hamburger, setHamburger] = useState(false);
 
   function toggleHamburger() {
@@ -20,11 +20,6 @@ export const Navbar = ({ targetRef, modalRef, dialogRef }) => {
     });
   };
   //modal
-
-  function toggleModal(e) {
-    e.preventDefault();
-    modalRef.current.showModal();
-  }
 
   function toggleDialog() {
     dialogRef.current.show();
@@ -48,7 +43,7 @@ export const Navbar = ({ targetRef, modalRef, dialogRef }) => {
             <a onClick={toggleDialog}>Cos</a>
           </li>
           <li className="button">
-            <a onClick={toggleModal}>Login</a>
+            <Link to="/auth/login">Log in</Link>
           </li>
         </ul>
         <div

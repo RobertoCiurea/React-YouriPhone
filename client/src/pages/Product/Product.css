@@ -22,6 +22,11 @@
   display: flex;
   justify-content: space-between;
 }
+.product-section img {
+  width: 400px;
+  height: 400px;
+  object-fit: contain;
+}
 .product-section .color-options button {
   border-radius: 50%;
   border: 2px solid var(--white);
