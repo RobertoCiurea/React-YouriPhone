@@ -7,6 +7,7 @@ export const ProductPage = ({ product }) => {
   const [color, setColor] = useState(0);
   const [items, setItems] = useState([]);
 
+  //add products to shopping cart
   function addItems(product) {
     setItems((currentItems) => {
       return [
@@ -39,6 +40,7 @@ export const ProductPage = ({ product }) => {
                 {
                   return (
                     <button
+                      key={index}
                       className={classColor}
                       onClick={() => setColor(index)}
                     ></button>
