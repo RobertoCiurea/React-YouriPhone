@@ -6,6 +6,7 @@ export const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   return (
+    //add form component for register
     <Form
       username={username}
       email={email}

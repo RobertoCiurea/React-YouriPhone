@@ -6,6 +6,7 @@ export const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   return (
+    //add form component for login
     <Form
       username={username}
       email={email}
