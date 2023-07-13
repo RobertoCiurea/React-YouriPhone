@@ -27,7 +27,7 @@ export default function App() {
         <Route path="/auth/register" element={<Register />} />
 
         {/*product routes */}
-
+        {/*product items */}
         <Route
           path="/products/iphone_14_pro_max"
           element={<ProductPage product={iphone_14_pro_max} />}

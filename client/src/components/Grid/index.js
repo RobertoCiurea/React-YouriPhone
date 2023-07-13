@@ -1,3 +1,5 @@
+//photos
+
 //11
 import Iphone_11 from "../../assets/11/iphone_11.png";
 import Iphone_11_pro from "../../assets/11/iphone_11_pro.png";

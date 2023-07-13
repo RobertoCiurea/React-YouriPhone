@@ -37,7 +37,7 @@ import {
   Iphone_12_green,
   Iphone_12_red,
 } from "./components/Grid/index";
-
+//product details
 const iphone_14_pro_max = {
   title: "iPhone 14 Pro Max",
   price: 6399.99,
