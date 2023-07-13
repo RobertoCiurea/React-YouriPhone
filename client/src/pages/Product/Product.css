@@ -8,6 +8,7 @@
   --iphone-blue: hsl(211, 25%, 73%);
   --iphone-yellow: hsl(54, 96%, 79%);
   --iphone-green: hsl(114, 10%, 37%);
+  --iphone-black: hsl(0, 0%, 18%);
   --cut-offer: hsl(351, 68%, 35%);
 }
 
@@ -68,6 +69,18 @@
 }
 .color-options .green {
   background-color: var(--iphone-green);
+}
+.color-options button:nth-child(1) {
+  background-color: var(--iphone-purple);
+}
+.color-options button:nth-child(2) {
+  background-color: var(--iphone-gold);
+}
+.color-options button:nth-child(3) {
+  background-color: var(--iphone-silver);
+}
+.color-options button:nth-child(4) {
+  background-color: var(--iphone-black);
 }
 .product-section .product-content .cut-deal {
   color: var(--cut-offer);
