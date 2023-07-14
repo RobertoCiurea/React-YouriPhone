@@ -20,7 +20,6 @@ export const ProductPage = ({ product }) => {
         },
       ];
     });
-    console.log(items);
   }
 
   const modalRef = useRef(null);
