@@ -23,6 +23,7 @@ router.post("/register", async (req, res) => {
   });
   newUser.save();
   res.json({ message: "User created succesfully" });
+  console.log("New user created");
 });
 
 router.post("/login", async (req, res) => {
@@ -40,8 +41,9 @@ router.post("/login", async (req, res) => {
 
   const secret = process.env.ACCES_TOKEN_SECRET;
 
-  const token = jwt.sign({ id: user._id }, secret, { expiresIn: "1h" });
+  const token = jwt.sign({ id: user._id }, secret, { expiresIn: "10s" });
   res.json({ token, userID: user._id });
+  res.json({ user });
 });
 
 export { router as userRouter };
