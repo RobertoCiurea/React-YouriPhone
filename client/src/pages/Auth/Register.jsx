@@ -3,7 +3,7 @@ import "./Auth.css";
 import axios from "axios";
 import { Form } from "../../components/Form/Form";
 export const Register = () => {
-  const [username, setUsername] = useState("a");
+  const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
