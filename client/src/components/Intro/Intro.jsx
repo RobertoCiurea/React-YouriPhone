@@ -20,8 +20,8 @@ export const Intro = () => {
         <div className="flex">
           <h3>
             Telefon + <span className="purple-mark">Accesoriu</span>
-            <h1 className="equal-sign">=</h1>
           </h3>
+          <h1 className="equal-sign">=</h1>
           <h1 className="sub-title">
             <span className="yellow-mark">10%</span>
             <br />
