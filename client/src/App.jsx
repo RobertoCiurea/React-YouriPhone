@@ -5,6 +5,7 @@ import { Home } from "./pages/Home/Home";
 import { ProductPage } from "./pages/Product/ProductPage";
 import { Login } from "./pages/Auth/Login";
 import { Register } from "./pages/Auth/Register";
+import { Account } from "./pages/Account/Account";
 import {
   iphone_14_pro_max,
   iphone_14_pro,
@@ -17,6 +18,8 @@ import {
 
 import "./App.css";
 export default function App() {
+  const userId = window.localStorage.userID;
+  const path = `/myaccount/?userid=${userId}`;
   return (
     <Router>
       <Routes>
@@ -25,6 +28,7 @@ export default function App() {
 
         <Route path="/auth/login" element={<Login />} />
         <Route path="/auth/register" element={<Register />} />
+        <Route path={path} element={<Account />} />
 
         {/*product routes */}
         {/*product items */}

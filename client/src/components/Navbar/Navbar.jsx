@@ -1,9 +1,17 @@
 import React, { useState, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useCookies } from "react-cookie";
 import "./Navbar.css";
 import Logo from "../../assets/icons/logo.svg";
 export const Navbar = ({ targetRef, dialogRef }) => {
   const [hamburger, setHamburger] = useState(false);
+  //auth
+  const [cookies, , removeToken] = useCookies(["access_token"]);
+  const navigate = useNavigate();
+
+  const logOut = () => {
+    removeToken(["access_token"]);
+  };
 
   function toggleHamburger() {
     setHamburger((prevSetHamburger) => !prevSetHamburger);
@@ -20,7 +28,9 @@ export const Navbar = ({ targetRef, dialogRef }) => {
     });
   };
   //modal
-
+  //account path
+  const userId = window.localStorage.userID;
+  const path = `/myaccount/?userid=${userId}`;
   function toggleDialog() {
     dialogRef.current.show();
   }
@@ -42,9 +52,23 @@ export const Navbar = ({ targetRef, dialogRef }) => {
           <li>
             <a onClick={toggleDialog}>Cos</a>
           </li>
-          <li className="button">
-            <Link to="/auth/login">Log in</Link>
-          </li>
+          {!cookies.access_token ? (
+            <li className="button">
+              <Link to="/auth/login">Log in</Link>
+            </li>
+          ) : (
+            <>
+              <li>
+                <Link to={path}>My Account</Link>
+              </li>
+              <li>
+                <button className="button-danger" onClick={logOut}>
+                  {" "}
+                  Log out
+                </button>
+              </li>
+            </>
+          )}
         </ul>
         <div
           className={`hamburger-toggle${toggleClassCheck}`}
