@@ -1,9 +1,11 @@
 .form-content {
   padding: 0;
   width: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 form {
@@ -46,4 +48,21 @@ form a {
 form a:hover {
   color: var(--ac-500-hover);
   transition: ease-in-out 0.5s;
+}
+
+/*Cookie*/
+.form-content .center {
+  display: flex;
+  color: var(--ac-500);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form-content .center a {
+  color: var(--ac-500);
+  font-size: var(--fs-menu);
+}
+.form-content .center a:hover {
+  transition: ease-in-out 0.5s;
+  color: var(--ac-500-hover);
 }

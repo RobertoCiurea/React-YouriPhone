@@ -1,3 +1,7 @@
+:root {
+  --cut-offer: hsl(351, 68%, 35%);
+}
+
 .navbar {
   background-color: var(--ac-200);
   display: flex;
@@ -56,6 +60,17 @@
   background-color: var(--ac-500-hover);
   transition: ease-in-out 0.5s;
 }
+
+.button-danger {
+  outline: none;
+  background: var(--cut-offer);
+  border: none;
+  color: var(--white);
+  padding: 0.5rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: var(--fs-menu);
+}
 /*Hamburger*/
 .hamburger-toggle {
   width: 55px;
@@ -100,6 +115,11 @@
   }
 }
 
+@media (max-width: 1215px) {
+  .button-danger {
+    font-size: 1.3rem;
+  }
+}
 @media (max-width: 750px) {
   .hamburger-toggle {
     display: block;
@@ -150,5 +170,8 @@
   }
   .navbar-list .button {
     padding: 0.3rem;
+  }
+  .button-danger {
+    font-size: 1.1rem;
   }
 }
