@@ -10,13 +10,17 @@ export const Register = () => {
   const onSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:3000/auth/register", {
+      const response = await axios.post("http://localhost:3000/auth/register", {
         username,
         email,
         password,
       });
-
-      alert("Registration completed");
+      const userFound = response.data.userFound;
+      if (!userFound) {
+        alert("Inregistrare completa!");
+      } else {
+        alert("Acest username sau email este deja folosit");
+      }
     } catch (error) {
       console.log(error);
     }

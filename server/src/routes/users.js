@@ -12,6 +12,7 @@ router.post("/register", async (req, res) => {
   if (user) {
     return res.json({
       message: "User with that username or email already exists",
+      userFound: true,
     });
   }
 
@@ -31,18 +32,28 @@ router.post("/login", async (req, res) => {
 
   const user = await userModel.findOne({ $and: [{ username }, { email }] });
   if (!user) {
-    return res.json({ message: "User not found" });
+    return res.json({ message: "User not found", userFound: false });
   }
 
   const isPasswordValid = await bcrypt.compare(password, user.password);
   if (!isPasswordValid) {
-    return res.json({ message: "Password is not valid" });
+    return res.json({
+      message: "Password is not valid",
+      userFound: true,
+      passwordValid: false,
+    });
   }
 
   const secret = process.env.ACCES_TOKEN_SECRET;
 
-  const token = jwt.sign({ id: user._id }, secret, { expiresIn: "10s" });
-  res.json({ token, userID: user._id, user });
+  const token = jwt.sign({ id: user._id }, secret, { expiresIn: "1h" });
+  res.json({
+    token,
+    userID: user._id,
+    user,
+    userFound: true,
+    passwordValid: true,
+  });
 });
 
 export { router as userRouter };

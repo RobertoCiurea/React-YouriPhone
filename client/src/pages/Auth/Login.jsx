@@ -17,15 +17,25 @@ export const Login = () => {
     e.preventDefault();
 
     try {
-      const resposne = await axios.post("http://localhost:3000/auth/login", {
+      const response = await axios.post("http://localhost:3000/auth/login", {
         username,
         email,
         password,
       });
-      setCookies("access_token", resposne.data.token);
-      window.localStorage.setItem("userID", resposne.data.userID);
-      console.log(resposne.data.user);
-      navigate(path);
+      const passwordValid = response.data.passwordValid;
+      const userFound = response.data.userFound;
+      if (!userFound) {
+        alert("Username sau email incorect! Incearca din nou");
+      } else {
+        if (!passwordValid) {
+          alert("Parola nu este corecta! Incearca din nou");
+        } else {
+          setCookies("access_token", response.data.token);
+          window.localStorage.setItem("userID", response.data.userID);
+          console.log(response.data.user);
+          navigate(path);
+        }
+      }
     } catch (error) {
       console.log(error);
     }
