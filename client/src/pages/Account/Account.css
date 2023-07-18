@@ -1,10 +1,10 @@
 .account-body {
   background-color: var(--bg-300);
-  color: var(--ac-500);
   min-height: 100vh;
 }
 
 .message {
+  color: var(--ac-500);
   display: flex;
   justify-content: center;
   align-items: center;
