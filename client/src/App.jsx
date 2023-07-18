@@ -18,8 +18,6 @@ import {
 
 import "./App.css";
 export default function App() {
-  const userId = window.localStorage.userID;
-  const path = `/myaccount/?userid=${userId}`;
   return (
     <Router>
       <Routes>
@@ -28,7 +26,7 @@ export default function App() {
 
         <Route path="/auth/login" element={<Login />} />
         <Route path="/auth/register" element={<Register />} />
-        <Route path={path} element={<Account />} />
+        <Route path="/myaccount/" element={<Account />} />
 
         {/*product routes */}
         {/*product items */}

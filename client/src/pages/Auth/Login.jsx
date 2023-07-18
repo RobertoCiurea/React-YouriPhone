@@ -11,8 +11,7 @@ export const Login = () => {
 
   const [_, setCookies] = useCookies(["access_token"]);
   const navigate = useNavigate();
-  const userId = window.localStorage.userID;
-  const path = `/myaccount/?userid=${userId}`;
+
   async function onSubmit(e) {
     e.preventDefault();
 
@@ -32,8 +31,10 @@ export const Login = () => {
         } else {
           setCookies("access_token", response.data.token);
           window.localStorage.setItem("userID", response.data.userID);
-          console.log(response.data.user);
-          navigate(path);
+          const userId = window.localStorage.userID;
+          const path = "/myaccount";
+          const userLocation = `${path}/?userid=${userId}`;
+          navigate(userLocation);
         }
       }
     } catch (error) {

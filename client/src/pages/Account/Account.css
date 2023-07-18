@@ -1,0 +1,22 @@
+.account-body {
+  background-color: var(--bg-300);
+  color: var(--ac-500);
+  min-height: 100vh;
+}
+
+.message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.message a {
+  color: var(--ac-400);
+  margin-left: 5px;
+  text-decoration: underline;
+}
+.message a:hover {
+  transition: ease-in-out 0.5s;
+  color: var(--ac-400-hover);
+}
