@@ -12,6 +12,7 @@ export const Navbar = ({ targetRef, dialogRef }) => {
   const logOut = () => {
     removeToken(["access_token"]);
     window.localStorage.removeItem("userID");
+    navigate("/");
   };
 
   function toggleHamburger() {
