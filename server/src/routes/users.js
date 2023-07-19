@@ -55,5 +55,11 @@ router.post("/login", async (req, res) => {
     passwordValid: true,
   });
 });
+//get the user data for "/myaccount" route;
 
+router.post("/myaccount", async (req, res) => {
+  const id = await req.body.id;
+  const user = await userModel.findOne({ _id: id });
+  res.json({ user });
+});
 export { router as userRouter };
