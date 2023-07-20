@@ -66,10 +66,11 @@
   background: var(--cut-offer);
   border: none;
   color: var(--white);
-  padding: 0.5rem;
+  padding: 0.8rem;
   border-radius: 30px;
   cursor: pointer;
   font-size: var(--fs-menu);
+  box-shadow: 3px 3px 20px 0 rgba(150, 29, 47, 0.7);
 }
 /*Hamburger*/
 .hamburger-toggle {
@@ -111,6 +112,9 @@
     font-size: 1.5rem;
   }
   .navbar-list .button {
+    padding: 0.5rem;
+  }
+  .navbar-list .button-danger {
     padding: 0.5rem;
   }
 }
@@ -172,6 +176,6 @@
     padding: 0.3rem;
   }
   .button-danger {
-    font-size: 1.1rem;
+    padding: 0.3rem;
   }
 }
