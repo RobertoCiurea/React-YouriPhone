@@ -29,10 +29,11 @@ export const Navbar = ({ targetRef, dialogRef }) => {
       block: "start",
     });
   };
-  //modal
   //account path
   const userId = window.localStorage.userID;
   const path = `/myaccount/?userid=${userId}`;
+
+  //modal
   function toggleDialog() {
     dialogRef.current.show();
   }
