@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Form.css";
 import { Link } from "react-router-dom";
 import { useCookies } from "react-cookie";
@@ -13,7 +13,14 @@ export const Form = ({
   onSubmit,
 }) => {
   const [cookies, setCookies] = useCookies(["access_token"]);
+  const [show, setShow] = useState(true);
+  const passwordRef = useRef(null);
 
+  function showPassword(e) {
+    e.preventDefault();
+    setShow((prevShow) => !prevShow);
+    passwordRef.current.type = show ? "text" : "password";
+  }
   return (
     <div className="form-content">
       {!cookies.access_token ? (
@@ -35,14 +42,20 @@ export const Form = ({
             placeholder="Email . . . "
             onChange={(e) => setEmail(e.target.value)}
           />
-          <input
-            type="password"
-            name="password"
-            value={password}
-            required
-            placeholder="Parola . . . "
-            onChange={(e) => setPassword(e.target.value)}
-          />
+          <div className="password-input">
+            <input
+              type="password"
+              name="password"
+              value={password}
+              required
+              ref={passwordRef}
+              placeholder="Parola . . . "
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <button className="show-password" onClick={showPassword}>
+              {show ? "SHOW" : "HIDE"}
+            </button>
+          </div>
           <button className="login" type="submit">
             {title}
           </button>

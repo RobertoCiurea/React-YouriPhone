@@ -1,3 +1,7 @@
+:root {
+  --gray: hsl(204, 8%, 55%);
+}
+
 .form-content {
   padding: 0;
   width: 100%;
@@ -65,4 +69,20 @@ form a:hover {
 .form-content .center a:hover {
   transition: ease-in-out 0.5s;
   color: var(--ac-500-hover);
+}
+
+form .password-input {
+  display: flex;
+  position: relative;
+}
+
+.password-input .show-password {
+  outline: none;
+  border: none;
+  background-color: var(--white);
+  color: var(--gray);
+  font-size: var(--fs-body);
+  cursor: pointer;
+  position: absolute;
+  right: 0;
 }
