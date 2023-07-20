@@ -1,6 +1,6 @@
 .account-body {
   background-color: var(--bg-300);
-  min-height: 100vh;
+  min-height: 50vh;
 }
 
 .message {
