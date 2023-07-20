@@ -22,14 +22,13 @@ export const ProductPage = ({ product }) => {
     });
   }
 
-  const modalRef = useRef(null);
   const dialogRef = useRef(null);
   return (
     <div className="container">
-      <Navbar modalRef={modalRef} dialogRef={dialogRef} />
+      <Navbar dialogRef={dialogRef} />
       <main className="main-section">
         <ShoppingCart dialogRef={dialogRef} items={items} setItems={setItems} />
-        <Modal modalRef={modalRef} />
+
         <section className="product-section">
           <img src={images[color]} alt="Iphone 14 Pro max" />
           <div className="product-content">
