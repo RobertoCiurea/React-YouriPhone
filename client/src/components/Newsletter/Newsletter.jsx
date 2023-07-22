@@ -1,4 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Button from "../../assets/icons/newsletter.svg";
 import "./Newsletter.css";
 
@@ -7,8 +9,19 @@ export const Newsletter = () => {
   const inputRef = useRef("");
 
   //popup
-  const [sent, setSent] = useState(false);
 
+  //toastify notification
+  const notify = () =>
+    toast.success("😎 Email trimis cu succes!", {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
   function handleNewsletter(e) {
     e.preventDefault();
     setNewsletters((currentNewsletters) => {
@@ -16,21 +29,23 @@ export const Newsletter = () => {
     });
     inputRef.current.value = "";
 
-    setSent(true);
-
-    //hide popup
-    setTimeout(() => {
-      setSent(false);
-    }, 3000);
+    notify();
   }
 
   return (
     <section className="newsletter-section">
-      {sent && (
-        <div className="popup">
-          <p>Email trimis cu succes!</p>
-        </div>
-      )}
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
       <h1>
         Aboneaza-te la Newsletter-ul
         <span className="yellow-mark"> nostru!</span>
